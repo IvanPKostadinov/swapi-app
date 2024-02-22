@@ -1,0 +1,10 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#273201",
+    "titleBar.activeBackground": "#374601",
+    "titleBar.activeForeground": "#F5FED7"
+  },
+  "cSpell.words": [
+    "swapi"
+  ]
+}
