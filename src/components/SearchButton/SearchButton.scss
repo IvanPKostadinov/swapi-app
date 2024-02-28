@@ -1,0 +1,27 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem.convert(75px);
+  height: rem.convert(50px);
+  border-radius: rem.convert(25px);
+
+  svg {
+  }
+
+  &:active {
+    background-color: colors.get('grey-200');
+  }
+  @include breakpoints.media('md') {
+    &:hover {
+      background-color: colors.get('grey-200');
+    }
+  }
+}

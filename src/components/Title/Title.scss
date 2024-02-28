@@ -1,0 +1,41 @@
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: spacing.get('400');
+
+  @include breakpoints.media('sm') {
+    margin-bottom: spacing.get('800');
+  }
+
+  &__title-text {
+    font-size: sizes.get('700');
+    color: colors.get('grey-900');
+    text-align: center;
+    margin: 0 0 spacing.get('100');
+
+    @include typography.style('bold');
+    @include breakpoints.media('sm') {
+      font-size: sizes.get('900');
+      margin-bottom: spacing.get('200');
+    }
+  }
+
+  &__subtitle-text {
+    font-size: sizes.get('300');
+    color: colors.get('grey-600');
+    text-align: center;
+    margin: 0;
+
+    @include typography.style('italic');
+    @include breakpoints.media('sm') {
+      font-size: sizes.get('400');
+    }
+  }
+}

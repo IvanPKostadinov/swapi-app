@@ -1,0 +1,29 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-nav-button {
+  width: rem.convert(80px);
+  height: rem.convert(40px);
+  border-radius: rem.convert(20px);
+  border: rem.convert(1px) solid colors.get('grey-300');
+  background-color: colors.get('white');
+
+  &:active {
+    background-color: colors.get('grey-200');
+  }
+
+  @include breakpoints.media('md') {
+    &:hover {
+      background-color: colors.get('grey-200');
+    }
+  }
+
+  &__label {
+    font-size: sizes.get('400');
+    @include typography.style('normal');
+  }
+}

@@ -1,0 +1,10 @@
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-error-message {
+  color: #982c2c;
+  font-size: sizes.get('600');
+  
+  @include typography.style('normal');
+}

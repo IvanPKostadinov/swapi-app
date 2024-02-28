@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all color variables.
+// -----------------------------------------------------------------------------
+
+@use 'styles/2-tools/colors' as colors;
+
+// Text colors
+$color-text-main: colors.get('grey-900');
+$color-text-hover: colors.get('grey-200');

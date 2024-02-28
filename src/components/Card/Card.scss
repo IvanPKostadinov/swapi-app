@@ -1,0 +1,21 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/spacing' as spacing;
+
+.swapi-card {
+  background-color: colors.get('white');
+  border-radius: rem.convert(8px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  padding: spacing.get('400');
+
+  &.link {
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.selected {
+    border: rem.convert(1px) solid colors.get('grey-500');
+  }
+}

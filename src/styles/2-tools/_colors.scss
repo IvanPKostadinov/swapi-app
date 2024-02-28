@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all color-related tools.
+// -----------------------------------------------------------------------------
+
+@use 'styles/0-tokens/global' as global;
+
+@function get($color-token) {
+  @return map-get(global.$global-colors, $color-token);
+}

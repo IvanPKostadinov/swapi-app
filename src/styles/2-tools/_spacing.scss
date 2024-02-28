@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all spacing-related tools.
+// -----------------------------------------------------------------------------
+
+@use 'styles/0-tokens/global' as global;
+
+@function get($spacing-token) {
+  @return map-get(global.$global-spacing, $spacing-token);
+}

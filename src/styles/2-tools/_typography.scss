@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all typography-related tools.
+// -----------------------------------------------------------------------------
+
+@mixin font($style, $weight) {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin style($font-type) {
+  @if $font-type == 'normal' {
+    @include font(normal, normal);
+  } @else if $font-type == 'bold' {
+    @include font(normal, 700);
+  } @else if $font-type == 'italic' {
+    @include font(italic, normal);
+  }
+}

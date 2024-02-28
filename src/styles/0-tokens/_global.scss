@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all global Sass variable Tokens.
+// -----------------------------------------------------------------------------
+
+// Global Color Tokens
+$global-colors: (
+  'white': #ffffff,
+  'black': #000000,
+  'grey-100': #f8f9fa,
+  'grey-200': #e9ecef,
+  'grey-300': #dee2e6,
+  'grey-400': #ced4da,
+  'grey-500': #adb5bd,
+  'grey-600': #6c757d,
+  'grey-700': #495057,
+  'grey-800': #343a40,
+  'grey-900': #212529,
+);
+
+// Global Size Tokens
+$global-sizes: (
+  '100': 4px,
+  '200': 8px,
+  '300': 12px,
+  '400': 16px,
+  '500': 20px,
+  '600': 24px,
+  '700': 32px,
+  '800': 40px,
+  '900': 48px,
+);
+
+// Global Spacing Tokens
+$global-spacing: (
+  '100': 4px,
+  '200': 8px,
+  '300': 12px,
+  '400': 16px,
+  '500': 20px,
+  '600': 24px,
+  '700': 32px,
+  '800': 40px,
+  '900': 56px,
+  '1000': 80px,
+);
+
+// Global Breakpoints Tokens
+$global-breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1140px,
+  'xxl': 1400px,
+);

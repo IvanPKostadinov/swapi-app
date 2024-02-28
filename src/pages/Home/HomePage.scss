@@ -1,0 +1,27 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: rem.convert(160px);
+
+  &__content {
+    width: 100%;
+    max-width: rem.convert(860px);
+    padding-left: spacing.get('400');
+    padding-right: spacing.get('400');
+
+    @include breakpoints.media('md') {
+      width: 80%;
+      padding: 0;
+    }
+  }
+}

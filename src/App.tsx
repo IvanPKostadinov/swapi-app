@@ -1,26 +1,28 @@
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
 
-function App():JSX.Element {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        {/* <img src={logo} className='App-logo' alt='logo' /> */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { HomePage } from 'pages/Home';
+import { ItemsPage } from 'pages/Items';
+import { ItemDetails } from 'components/Items/ItemDetails';
+
+enum Params {
+  TYPE = 'type',
+  ID = 'id',
 }
+
+export type RouteParams = Record<Params, string>;
+
+const App = (): JSX.Element => {
+  return (
+    <main>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path={`/:${Params.TYPE}`} element={<ItemsPage />}>
+          <Route path={`:${Params.ID}`} element={<ItemDetails isDesktop />} />
+        </Route>
+      </Routes>
+    </main>
+  );
+};
 
 export default App;

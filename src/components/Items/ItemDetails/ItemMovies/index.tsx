@@ -1,0 +1,1 @@
+export { ItemMovies } from './ItemMovies';

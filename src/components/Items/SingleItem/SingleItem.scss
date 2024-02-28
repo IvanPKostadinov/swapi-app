@@ -1,0 +1,43 @@
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-single-item {
+ 
+  &__name {
+    font-size: sizes.get('500');
+    margin: 0 0 spacing.get('400');
+
+    @include typography.style('bold');
+  }
+
+  &__text {
+    font-size: sizes.get('400');
+
+    @include typography.style('normal');
+  }
+
+  &__details {
+    hr {
+      border-color: colors.get('grey-200');
+      border-width: 0.5px;
+      margin: 0;
+    }
+
+    display: block;
+    margin-top: spacing.get('500');
+
+    @include breakpoints.media('md') {
+      display: none;
+    }
+  }
+
+  &__details-title {
+    font-size: sizes.get('500');
+    margin: spacing.get('300') 0 spacing.get('500');
+
+    @include typography.style('bold');
+  }
+}

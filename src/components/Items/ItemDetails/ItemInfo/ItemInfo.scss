@@ -1,0 +1,22 @@
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-item-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: spacing.get('400');
+
+  &__title {
+    margin: 0 0 spacing.get('200');
+    font-size: sizes.get('400');
+
+    @include typography.style('bold');
+  }
+
+  &__text {
+    font-size: sizes.get('400');
+
+    @include typography.style('italic');
+  }
+}

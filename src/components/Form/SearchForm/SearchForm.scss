@@ -1,0 +1,24 @@
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/spacing' as spacing;
+
+.swapi-search-form {
+  width: 100%;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: spacing.get('600');
+  }
+
+  &__input-fields-radio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include breakpoints.media('md') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

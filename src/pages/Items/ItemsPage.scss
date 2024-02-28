@@ -1,0 +1,72 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/spacing' as spacing;
+
+.swapi-items-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: spacing.get('400') 0 spacing.get('900');
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: rem.convert(860px);
+    padding-left: spacing.get('400');
+    padding-right: spacing.get('400');
+
+    @include breakpoints.media('md') {
+      width: 80%;
+      padding: 0;
+    }
+  }
+
+  &__search-container {
+    width: 100%;
+  }
+
+  &__navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: rem.convert(40px);
+    margin: spacing.get('500') 0 spacing.get('500');
+  }
+
+  &__navigation-button-left {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  &__navigation-button-right {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &__items-content {
+    width: 100%;
+    display: flex;
+    gap: spacing.get('500');
+  }
+
+  &__items-container {
+    flex: 1;
+
+    @include breakpoints.media('md') {
+      flex: 3;
+    }
+  }
+
+  &__item-container-desktop {
+    display: none;
+
+    @include breakpoints.media('md') {
+      display: block;
+      flex: 2;
+    }
+  }
+}

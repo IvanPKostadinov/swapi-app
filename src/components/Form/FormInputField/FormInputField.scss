@@ -1,0 +1,119 @@
+@use '~sass-rem' as rem;
+
+@use 'styles/2-tools/breakpoints' as breakpoints;
+@use 'styles/2-tools/colors' as colors;
+@use 'styles/2-tools/sizes' as sizes;
+@use 'styles/2-tools/spacing' as spacing;
+@use 'styles/2-tools/typography' as typography;
+
+.swapi-form-input-field {
+  &__input-radio-container {
+    display: flex;
+    align-items: center;
+    margin-left: spacing.get('400');
+    padding: spacing.get('100') 0;
+
+    @include breakpoints.media('md') {
+      margin: 0 spacing.get('200');
+    }
+  }
+
+  &__input-radio {
+    appearance: none;
+    width: rem.convert(8px);
+    height: rem.convert(8px);
+    margin: 0 spacing.get('400') 0 0;
+    border-radius: 50%;
+    background-color: colors.get('white');
+    outline: 1px solid colors.get('grey-500');
+    outline-offset: 2px;
+
+    &:checked {
+      border-color: colors.get('grey-700');
+      background-color: colors.get('grey-700');
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include breakpoints.media('md') {
+      margin-right: spacing.get('200');
+      width: rem.convert(12px);
+      height: rem.convert(12px);
+    }
+  }
+
+  &__input-radio-label {
+    color: colors.get('grey-500');
+    font-size: sizes.get('400');
+
+    &.selected {
+      color: colors.get('grey-700');
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: colors.get('grey-700');
+    }
+
+    @include typography.style('normal');
+    @include breakpoints.media('md') {
+      font-size: sizes.get('500');
+    }
+  }
+
+  &__input-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: colors.get('white');
+    width: 100%;
+    height: rem.convert(50px);
+    border-radius: rem.convert(25px);
+    border: rem.convert(1px) solid colors.get('grey-300');
+    overflow: hidden;
+
+    &:focus-within {
+      border-color: colors.get('grey-600');
+    }
+  }
+
+  &__input-text {
+    font-size: sizes.get('500');
+    color: colors.get('grey-700');
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    margin-left: spacing.get('500');
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: colors.get('grey-400');
+    }
+
+    @include typography.style('normal');
+  }
+
+  &__buttons-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__input-text-button-clear {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    width: rem.convert(32px);
+    height: rem.convert(32px);
+    fill: colors.get('grey-600');
+
+    &:hover {
+      border: rem.convert(1px) solid colors.get('grey-200');
+    }
+  }
+}

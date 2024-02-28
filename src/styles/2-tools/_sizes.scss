@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains all size-related tools.
+// -----------------------------------------------------------------------------
+
+@use 'styles/0-tokens/global' as global;
+
+@function get($size-token) {
+  @return map-get(global.$global-sizes, $size-token);
+}

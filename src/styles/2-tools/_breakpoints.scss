@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all media breakpoints.
+// -----------------------------------------------------------------------------
+
+@use 'styles/0-tokens/global' as global;
+
+@mixin media($screen-size) {
+  $min: map-get(global.$global-breakpoints, $screen-size);
+
+  @media (min-width: $min) {
+    @content;
+  }
+}
